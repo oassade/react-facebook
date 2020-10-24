@@ -8,31 +8,37 @@ export default function Stories() {
         id: 1,
         avatar: "img/avatar/2.jpg",
         image: "img/stories/st-2.jpeg",
+        text: "hello everyone",
       },
       {
         id: 2,
         avatar: "img/avatar/2.jpg",
         image: "img/stories/st-2.jpeg",
+        text: "hello everyone",
       },
       {
         id: 3,
         avatar: "img/avatar/2.jpg",
         image: "img/stories/st-2.jpeg",
+        text: "hello everyone",
       },
       {
         id: 4,
         avatar: "img/avatar/2.jpg",
         image: "img/stories/st-2.jpeg",
+        text: "hello everyone",
       },
       {
         id: 5,
         avatar: "img/avatar/2.jpg",
         image: "img/stories/st-2.jpeg",
+        text: "hello everyone",
       },
     ],
   });
   const stories = story.stories.map((x) => {
-    return <Story />;
+    const data = { id: x.id, avatar: x.avatar, image: x.image, text: x.text };
+    return <Story data={data} />;
   });
   return (
     <div className="stories">

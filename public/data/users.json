@@ -1,0 +1,40 @@
+{
+    "friends": [
+        {
+          "id":1,
+          "conn": true,
+          "image": "img/avatar/1.jpg",
+          "name": "Omar"
+        },
+        {
+          "id":2,
+          "conn": true,
+          "image": "img/avatar/1.jpg",
+          "name": "Omar"
+        },
+        {
+          "id":3,
+          "conn": true,
+          "image": "img/avatar/1.jpg",
+          "name": "Omar"
+        },
+        {
+          "id":4,
+          "conn": false,
+          "image": "img/avatar/1.jpg",
+          "name": "Omar"
+        },
+        {
+          "id":5,
+          "conn": true,
+          "image": "img/avatar/1.jpg",
+          "name": "Omar"
+        },
+        {
+          "id":6,
+          "conn": false,
+          "image": "img/avatar/1.jpg",
+          "name": "Omar"
+        }
+      ]
+}

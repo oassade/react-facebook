@@ -3,53 +3,23 @@ import React, { Component } from "react";
 import Friends from "./shared/friends/friends";
 import Profile from "./shared/profile/Profile";
 import Post from "./Post";
+import axios from "axios";
 
 export default class timeline extends Component {
   state = {
-    posts: [
-      {
-        conn: true,
-        header: "Travellimg to the future 🌟 , it's alraedy 2020' 🙋‍♂🌈🌴",
-        image: "img/posts/1.jpg",
-        avatar: "img/avatar/5.jpg",
-        name: "Omar",
-        ca: "1 hour ago",
-      },
-      {
-        conn: true,
-        header: "Travellimg to the future 🌟 , it's alraedy 2020' 🙋‍♂🌈🌴",
-        image: "img/posts/1.jpg",
-        avatar: "img/avatar/5.jpg",
-        name: "Omar",
-        ca: "1 hour ago",
-      },
-      {
-        conn: false,
-        header: "Travellimg to the future 🌟 , it's alraedy 2020' 🙋‍♂🌈🌴",
-        image: "img/posts/1.jpg",
-        avatar: "img/avatar/5.jpg",
-        name: "Omar",
-        ca: "1 hour ago",
-      },
-      {
-        conn: true,
-        header: "Travellimg to the future 🌟 , it's alraedy 2020' 🙋‍♂🌈🌴",
-        image: "img/posts/1.jpg",
-        avatar: "img/avatar/5.jpg",
-        name: "Omar",
-        ca: "1 hour ago",
-      },
-      {
-        conn: false,
-        header: "Travellimg to the future 🌟 , it's alraedy 2020' 🙋‍♂🌈🌴",
-        image: "img/posts/1.jpg",
-        avatar: "img/avatar/5.jpg",
-        name: "Omar",
-        ca: "1 hour ago",
-      },
-    ],
+    posts: [],
   };
-
+  componentDidMount() {
+    axios
+      .get("data/posts.json")
+      .then((response) => {
+        this.setState({ posts: response.data.posts });
+        // console.log(response.data);
+      })
+      .catch((error) => {
+        // console.log(error);
+      });
+  }
   render() {
     const posts = this.state.posts.map((post) => {
       // console.log(post);

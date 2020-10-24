@@ -1,40 +1,16 @@
 import React, { Component } from "react";
 import Friend from "./friend";
+import axios from "axios";
 export default class friends extends Component {
   state = {
-    contacts: [
-      {
-        conn: true,
-        image: "img/avatar/1.jpg",
-        name: "Omar",
-      },
-      {
-        conn: true,
-        image: "img/avatar/1.jpg",
-        name: "Omar",
-      },
-      {
-        conn: true,
-        image: "img/avatar/1.jpg",
-        name: "Omar",
-      },
-      {
-        conn: false,
-        image: "img/avatar/1.jpg",
-        name: "Omar",
-      },
-      {
-        conn: true,
-        image: "img/avatar/1.jpg",
-        name: "Omar",
-      },
-      {
-        conn: false,
-        image: "img/avatar/1.jpg",
-        name: "Omar",
-      },
-    ],
+    contacts: [],
   };
+  componentDidMount() {
+    axios.get("/data/friends.json").then((response) => {
+      this.setState({ contacts: response.data.friends });
+      // console.log(response.data);
+    });
+  }
   render() {
     var friends = this.state.contacts.map((contact) => {
       return this.props.name ? (

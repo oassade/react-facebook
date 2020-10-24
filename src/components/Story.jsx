@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
-export default function Story() {
+export default function Story(props) {
   return (
     <div className="item">
       <div className="overlay">
         <div className="person">
           <div className="profile">
-            <img src="img/avatar/2.jpg" alt="" />
+            <img src={props.data.avatar} alt="" />
           </div>
         </div>
-        {/* <h4> samantha john</h4> */}
+        <h5 style={{ color: "white" }}> {props.data.text}</h5>
       </div>
       <div className="story-image">
-        <img src="img/stories/st-2.jpeg" alt="" />
+        <img src={props.data.image} alt="" />
       </div>
     </div>
   );
