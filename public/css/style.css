@@ -9,7 +9,8 @@
   --calendar: 0;
   --messages: 0;
   --notif: 0;
-  --conn: rgb(61, 241, 7);
+  --conn: rgb(109, 245, 46);
+  --nconn: rgb(137, 144, 151);
   --primary: rgb(3, 29, 46);
   --accent: rgb(7, 42, 65);
   --lighter: rgb(26, 68, 100);
@@ -634,7 +635,6 @@ nav .right-side .user-icons .icon.has-notification::after {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: var(--conn);
   position: absolute;
   bottom: 0px;
   right: -5px;
@@ -930,4 +930,11 @@ nav .right-side .user-icons .icon.has-notification::after {
 }
 .notif::after {
   content: var(--notif) !important;
+}
+.conn::after {
+  background-color: var(--conn) !important;
+}
+
+.nconn::after {
+  background-color: var(--nconn) !important;
 }

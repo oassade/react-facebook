@@ -10,7 +10,7 @@ export default class Profile extends Component {
   render() {
     return (
       <div class="user">
-        <div class="profile">
+        <div class="profile conn">
           <img src={this.state.profil.avatar} alt="" />
         </div>
         {this.props.name && <h4>{this.state.profil.name}</h4>}

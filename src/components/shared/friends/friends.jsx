@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import Friend from "./friend";
 export default class friends extends Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     contacts: [
       {
@@ -22,7 +19,7 @@ export default class friends extends Component {
         name: "Omar",
       },
       {
-        conn: true,
+        conn: false,
         image: "img/avatar/1.jpg",
         name: "Omar",
       },
@@ -32,15 +29,19 @@ export default class friends extends Component {
         name: "Omar",
       },
       {
-        conn: true,
+        conn: false,
         image: "img/avatar/1.jpg",
         name: "Omar",
       },
     ],
   };
   render() {
-    var friends = this.state.contacts.map((friend) => {
-      return this.props.name ? <Friend name={friend.name} /> : <Friend />;
+    var friends = this.state.contacts.map((contact) => {
+      return this.props.name ? (
+        <Friend name={contact.name} image={contact.image} conn={contact.conn} />
+      ) : (
+        <Friend conn={contact.conn} image={contact.image} />
+      );
     });
     return <>{friends}</>;
   }
