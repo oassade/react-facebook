@@ -1,16 +1,51 @@
 import React, { Component } from "react";
+import Friends from "./shared/friends/friends";
+import Profile from "./shared/profile/Profile";
 
 export default class timeline extends Component {
+  // state = {
+  //   contacts: [
+  //     {
+  //       conn: true,
+  //       image: "img/avatar/1.jpg",
+  //       name: "Omar",
+  //     },
+  //     {
+  //       conn: true,
+  //       image: "img/avatar/1.jpg",
+  //       name: "Omar",
+  //     },
+  //     {
+  //       conn: true,
+  //       image: "img/avatar/1.jpg",
+  //       name: "Omar",
+  //     },
+  //     {
+  //       conn: true,
+  //       image: "img/avatar/1.jpg",
+  //       name: "Omar",
+  //     },
+  //     {
+  //       conn: true,
+  //       image: "img/avatar/1.jpg",
+  //       name: "Omar",
+  //     },
+  //     {
+  //       conn: true,
+  //       image: "img/avatar/1.jpg",
+  //       name: "Omar",
+  //     },
+  //   ],
+  // };
   render() {
+    // var friends = this.state.contacts.map((friend) => {
+    //   return <Friend />;
+    // });
     return (
       <div className="timeline">
         <div className="view create-post">
           <div className="input">
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/hero.png" alt="" />
-              </div>
-            </div>
+            <Profile />
             <input type="text" placeholder="What on your mind, Anne?" />
           </div>
           <div className="media">
@@ -47,62 +82,7 @@ export default class timeline extends Component {
             <a>create</a>
           </div>
           <div className="owl-carousel owl-theme rooms">
-            <div className="item">
-              <div className="user">
-                <div className="profile">
-                  <img src="img/avatar/hero.png" alt="" />
-                </div>
-              </div>
-            </div>
-            {/**/}
-            <div className="item">
-              <div className="user">
-                <div className="profile">
-                  <img src="img/avatar/1.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            {/**/}
-            <div className="item">
-              <div className="user">
-                <div className="profile">
-                  <img src="img/avatar/3.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            {/**/}
-            <div className="item">
-              <div className="user">
-                <div className="profile">
-                  <img src="img/avatar/4.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            {/**/}
-            <div className="item">
-              <div className="user">
-                <div className="profile">
-                  <img src="img/avatar/2.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            {/**/}
-            <div className="item">
-              <div className="user">
-                <div className="profile">
-                  <img src="img/avatar/4.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            {/**/}
-            <div className="item">
-              <div className="user">
-                <div className="profile">
-                  <img src="img/avatar/5.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            {/**/}
+            <Friends name={false} />
           </div>
         </div>
         {/*post container*/}

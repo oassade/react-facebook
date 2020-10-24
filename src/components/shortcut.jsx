@@ -1,6 +1,25 @@
 import React, { Component } from "react";
+import Friends from "./shared/friends/friends";
 
 export default class shortcut extends Component {
+  state = {
+    pages: [
+      {
+        image: "img/stories/st-2.jpeg",
+        desc: "Script house",
+      },
+      {
+        image: "img/stories/st-1.jpeg",
+        desc: "Script house",
+      },
+    ],
+    birthdays: [
+      {
+        image: "img/icons/gift.svg",
+        desc: "it's diana berry's birthday",
+      },
+    ],
+  };
   render() {
     return (
       <div className="shortcuts shortcuts-2">
@@ -47,66 +66,7 @@ export default class shortcut extends Component {
           </div>
           <div className="online">
             <h6 className="title">contact</h6>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/1.jpg" alt="" />
-              </div>
-              <h4>diana berry</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/4.jpg" alt="" />
-              </div>
-              <h4>rosie pie</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/2.jpg" alt="" />
-              </div>
-              <h4>samantha jones</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/3.jpg" alt="" />
-              </div>
-              <h4>john doe</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/4.jpg" alt="" />
-              </div>
-              <h4>stacy jr.</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/5.jpg" alt="" />
-              </div>
-              <h4>christin sam</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/6.jpg" alt="" />
-              </div>
-              <h4>kate simon</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/1.jpg" alt="" />
-              </div>
-              <h4>diana berry</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/2.jpg" alt="" />
-              </div>
-              <h4>sarah cerny</h4>
-            </div>
-            <div className="user">
-              <div className="profile">
-                <img src="img/avatar/3.jpg" alt="" />
-              </div>
-              <h4>josh doe</h4>
-            </div>
+            <Friends name={true} />
           </div>
         </div>
       </div>

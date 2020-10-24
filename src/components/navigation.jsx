@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Profile from "./shared/profile/Profile";
 export default class navigation extends Component {
   state = {
     flag: '"5"',
@@ -89,12 +89,7 @@ export default class navigation extends Component {
         </div>
         {/*right side*/}
         <div className="right-side">
-          <div className="user">
-            <div className="profile">
-              <img src={this.state.profile.avatar} alt="" />
-            </div>
-            <h4>{this.state.profile.name}</h4>
-          </div>
+          <Profile name={true} />
           {/*icons*/}
           <div className="user-icons">
             <div className="icon">

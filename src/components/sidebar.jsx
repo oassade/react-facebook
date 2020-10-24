@@ -1,11 +1,8 @@
 import React, { Component } from "react";
+import Profile from "./shared/profile/Profile";
 
 export default class sidebar extends Component {
   state = {
-    profil: {
-      avatar: "img/avatar/hero.png",
-      name: "Omar",
-    },
     first: {
       covid: {
         avatar: "img/icons/shield.svg",
@@ -83,12 +80,7 @@ export default class sidebar extends Component {
     return (
       <div className="shortcuts">
         <div className="first-col">
-          <div class="user">
-            <div class="profile">
-              <img src={this.state.profil.avatar} alt="" />
-            </div>
-            <h4>{this.state.profil.name}</h4>
-          </div>
+          <Profile name={true} />
           {first}
         </div>
         <div className="second-col">
