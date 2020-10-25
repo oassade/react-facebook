@@ -1,43 +1,21 @@
 import React, { useState } from "react";
 import Story from "./Story";
+import axios from "axios";
 
 export default function Stories() {
   const [story, setStory] = useState({
-    stories: [
-      {
-        id: 1,
-        avatar: "img/avatar/2.jpg",
-        image: "img/stories/st-2.jpeg",
-        text: "hello everyone",
-      },
-      {
-        id: 2,
-        avatar: "img/avatar/2.jpg",
-        image: "img/stories/st-2.jpeg",
-        text: "hello everyone",
-      },
-      {
-        id: 3,
-        avatar: "img/avatar/2.jpg",
-        image: "img/stories/st-2.jpeg",
-        text: "hello everyone",
-      },
-      {
-        id: 4,
-        avatar: "img/avatar/2.jpg",
-        image: "img/stories/st-2.jpeg",
-        text: "hello everyone",
-      },
-      {
-        id: 5,
-        avatar: "img/avatar/2.jpg",
-        image: "img/stories/st-2.jpeg",
-        text: "hello everyone",
-      },
-    ],
+    stories: [],
   });
-  const stories = story.stories.map((x) => {
-    const data = { id: x.id, avatar: x.avatar, image: x.image, text: x.text };
+  axios.get("/data/stories.json").then((response) => {
+    setStory({ stories: response.data.stories });
+  });
+  const stories = story.stories.map((story) => {
+    const data = {
+      id: story.id,
+      avatar: story.avatar,
+      image: story.image,
+      text: story.text,
+    };
     return <Story data={data} />;
   });
   return (
