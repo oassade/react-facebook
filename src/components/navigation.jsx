@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Profile from "./shared/profile/Profile";
 export default class navigation extends Component {
   state = {
-    flag: '"5"',
+    flag: '"8"',
     tv: '"3"',
     friends: '"6"',
     calendar: '"0"',

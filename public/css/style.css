@@ -938,3 +938,7 @@ nav .right-side .user-icons .icon.has-notification::after {
 .nconn::after {
   background-color: var(--nconn) !important;
 }
+
+.hidde {
+  display: none;
+}

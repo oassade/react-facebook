@@ -10,6 +10,10 @@ export default class friends extends Component {
       this.setState({ contacts: response.data.friends });
       // console.log(response.data);
     });
+
+    // setTimeout(() => {
+    //   this.setState({ contacts: [] });
+    // }, 4000);
   }
   render() {
     var friends = this.state.contacts.map((contact) => {
